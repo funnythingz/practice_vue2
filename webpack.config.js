@@ -3,7 +3,7 @@ var VueLoaderPlugin = require('./node_modules/vue-loader/lib/plugin')
 module.exports = {
   //エントリポイントのJavaScript
   entry: {
-    build: ['app/app.js', './app/zipcode_search.vue']
+    build: ['./app/app.js']
   },
   output: {
     //出力先のフォルダ

@@ -1,5 +1,7 @@
 <template>
-<h1>sample</h1>
+  <div>
+    <h1>sample</h1>
+  </div>
   <!-- div.zipcode
     input(type="text" v-model="zipcode")
     button(@click='search')
