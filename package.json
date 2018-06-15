@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --inline --progress --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -20,7 +20,8 @@
     "lite-server": "^2.3.0",
     "vue-loader": "^15.2.4",
     "webpack": "^4.12.0",
-    "webpack-cli": "^3.0.4"
+    "webpack-cli": "^3.0.4",
+    "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
     "vue": "^2.5.16",
