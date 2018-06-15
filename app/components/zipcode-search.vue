@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Sample</h1>
+    <h1>郵便番号検索できるよ</h1>
     <div class="zipcode">
       <input type="text" v-model="zipcode">
       <button @click='search'>
