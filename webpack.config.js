@@ -1,25 +1,31 @@
-var path = require('path');
-var VueLoaderPlugin = require('./node_modules/vue-loader/lib/plugin')
+const path = require('path')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 module.exports = {
-  //エントリポイントのJavaScript
-  entry: {
-    build: ['./app/app.js']
-  },
-  output: {
-    //出力先のフォルダ
-    path: path.resolve(__dirname, 'build'),
-    //出力先のファイル名
-    filename: 'bundle.js'
-  },
-  module: {
-    rules: [
-    {
-      test: /\.vue$/,
-      loader: 'vue-loader',
-    }
-  ]
-  },
-  plugins: [
-    new VueLoaderPlugin()
-  ]
+    entry: {
+        build: ['./app/app.js']
+    },
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.js'
+    },
+    module: {
+        rules: [
+            {
+                test: /\.vue$/,
+                loader: 'vue-loader',
+            },
+            {
+                test: /\.js$/,
+                loader: 'babel-loader'
+            }
+        ]
+    },
+    plugins: [
+        new VueLoaderPlugin(),
+        new HtmlWebpackPlugin({
+            template: './app/index.html'
+        })
+    ]
 };
